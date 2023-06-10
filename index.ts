@@ -37,8 +37,6 @@ type Columns<ColumnNames extends string> =
     | ColumnNames
     | SqlAliases<ColumnNames>;
 
-type x = Columns<"id" | "first_name">;
-
 function select<
     Name extends TableNames,
     SelectColumns extends Columns<keyof Tables[Name] & string>
